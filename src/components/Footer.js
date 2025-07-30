@@ -15,14 +15,18 @@ export default function Footer() {
               France
             </p>
             <div className="flex space-x-4">
-              {/* <a href="#" className="hover:opacity-75 transition-opacity">
+              <a
+                href="https://www.facebook.com/photographebayardclement?locale=fr_FR"
+                className="hover:opacity-75 transition-opacity"
+                target="_blank"
+              >
                 <Image
                   src="/images/facebook.webp"
                   alt="Facebook"
                   width={24}
                   height={24}
                 />
-              </a> */}
+              </a>
               <a
                 href="https://www.instagram.com/clementbayard/"
                 className="hover:opacity-75 transition-opacity"
@@ -35,14 +39,18 @@ export default function Footer() {
                   height={24}
                 />
               </a>
-              {/* <a href="#" className="hover:opacity-75 transition-opacity">
+              <a
+                href="https://www.youtube.com/@clementbayard7153"
+                className="hover:opacity-75 transition-opacity"
+                target="_blank"
+              >
                 <Image
                   src="/images/youtube.webp"
                   alt="YouTube"
                   width={24}
                   height={24}
                 />
-              </a> */}
+              </a>
             </div>
           </div>
 
