@@ -12,41 +12,39 @@ function MentionsLegal() {
         "Nom : Clement Bayard",
         "Adresse : 12 rue des semailles, Escaudain 59124",
         "Email : bayard.clt@gmail.com",
-        "Numéro de téléphone : 0615978820"
-      ]
+        "Numéro de téléphone : 0615978820",
+      ],
     },
     {
       title: "Numéro d'identification",
-      items: [
-        "Numéro de Siret : 87903512900029"
-      ]
+      items: ["Numéro de Siret : 87903512900029"],
     },
     {
       title: "Hébergement du site",
       items: [
         "Hébergement assuré par : Hostinger International Ltd",
         "Adresse de l'hébergeur : 61 Lordou Vironos Street, 6023 Larnaca, Cyprus",
-        "Contact de l'hébergeur : support@hostinger.com"
-      ]
+        "Contact de l'hébergeur : support@hostinger.com",
+      ],
     },
     {
       title: "Propriété intellectuelle",
       items: [
-        "Tous droits réservés - Les images présentes sur ce site sont protégées par le droit d'auteur. Toute reproduction ou utilisation des images sans autorisation préalable est interdite."
-      ]
+        "Tous droits réservés - Les images présentes sur ce site sont protégées par le droit d'auteur. Toute reproduction ou utilisation des images sans autorisation préalable est interdite.",
+      ],
     },
     {
       title: "Politique de confidentialité",
       items: [
-        "Nous respectons la confidentialité de vos informations. Aucune donnée personnelle n'est collectée automatiquement sur ce site sans votre consentement explicite. Pour plus d'informations sur notre politique de confidentialité, veuillez consulter notre page dédiée à la vie privée."
-      ]
+        "Nous respectons la confidentialité de vos informations. Aucune donnée personnelle n'est collectée automatiquement sur ce site sans votre consentement explicite. Pour plus d'informations sur notre politique de confidentialité, veuillez consulter notre page dédiée à la vie privée.",
+      ],
     },
     {
       title: "Cookies",
       items: [
-        "Ce site n'utilise pas de cookies pour collecter des données personnelles ou suivre l'activité des visiteurs. Nous respectons la vie privée de nos utilisateurs."
-      ]
-    }
+        "Ce site n'utilise pas de cookies pour collecter des données personnelles ou suivre l'activité des visiteurs. Nous respectons la vie privée de nos utilisateurs.",
+      ],
+    },
   ];
 
   return (
@@ -57,24 +55,28 @@ function MentionsLegal() {
             Mentions Légales
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Informations légales concernant le site de Clément Bayard, photographe professionnel
+            Informations légales concernant le site de Clément Bayard,
+            photographe professionnel
           </p>
         </div>
 
         <div className="space-y-8">
           {sections.map((section, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-xl"
+            >
               <h2 className="text-2xl font-bold mb-6 font-['Cormorant_Garamond'] text-white border-b border-gray-300 pb-3">
                 {section.title}
               </h2>
               <ul className="space-y-3">
                 {section.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="text-gray-200 leading-relaxed">
-                    {section.title === "Propriété intellectuelle" || 
-                     section.title === "Politique de confidentialité" || 
-                     section.title === "Cookies" ? (
+                    {section.title === "Propriété intellectuelle" ||
+                    section.title === "Politique de confidentialité" ||
+                    section.title === "Cookies" ? (
                       <div className="italic text-gray-300 bg-gray-800/30 p-4 rounded-lg">
-                        "{item}"
+                        &ldquo;{item}&ldquo;
                       </div>
                     ) : (
                       <span className="flex items-start">
@@ -95,7 +97,8 @@ function MentionsLegal() {
               Contact
             </h3>
             <p className="text-gray-200 mb-4">
-              Pour toute question concernant ces mentions légales ou l'utilisation de ce site :
+              Pour toute question concernant ces mentions légales ou
+              l&apos;utilisation de ce site :
             </p>
             <a
               href="mailto:bayard.clt@gmail.com"
