@@ -2,9 +2,14 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Détermine si on est sur une page culinaire
+  const isCulinairePage = pathname?.startsWith("/culinaire");
 
   return (
     <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
@@ -20,39 +25,49 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link
-              href="/"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
-            >
-              Accueil
-            </Link>
-            <Link
-              href="/mariage"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
-            >
-              Mariage
-            </Link>
-            {/* <Link href="/culinaire" className="text-gray-700 hover:text-gray-900 transition-colors">
-              Culinaire
-            </Link> */}
-            <Link
-              href="/video"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
-            >
-              Vidéo
-            </Link>
-            <Link
-              href="/mariage/tarif"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
-            >
-              Tarifs
-            </Link>
-            {/* <Link
-              href="/contact"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
-            >
-              Contact
-            </Link> */}
+            {isCulinairePage ? (
+              <>
+                <Link
+                  href="/culinaire"
+                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                >
+                  Culinaire
+                </Link>
+                <Link
+                  href="/culinaire/tarif"
+                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                >
+                  Tarifs
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/"
+                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                >
+                  Accueil
+                </Link>
+                <Link
+                  href="/mariage"
+                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                >
+                  Mariage
+                </Link>
+                <Link
+                  href="/video"
+                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                >
+                  Vidéo
+                </Link>
+                <Link
+                  href="/mariage/tarif"
+                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                >
+                  Tarifs
+                </Link>
+              </>
+            )}
           </div>
 
           <div className="md:hidden flex items-center">
@@ -96,36 +111,44 @@ export default function Navbar() {
             >
               Accueil
             </Link>
-            <Link
-              href="/mariage"
-              className="block px-3 py-2 text-gray-700 hover:text-gray-900"
-            >
-              Mariage
-            </Link>
-            {/* <Link
-              href="/culinaire"
-              className="block px-3 py-2 text-gray-700 hover:text-gray-900"
-            >
-              Culinaire
-            </Link> */}
-            <Link
-              href="/video"
-              className="block px-3 py-2 text-gray-700 hover:text-gray-900"
-            >
-              Vidéo
-            </Link>
-            <Link
-              href="/mariage/tarif"
-              className="block px-3 py-2 text-gray-700 hover:text-gray-900"
-            >
-              Tarifs
-            </Link>
-            {/* <Link
-              href="/contact"
-              className="block px-3 py-2 text-gray-700 hover:text-gray-900"
-            >
-              Contact
-            </Link> */}
+
+            {isCulinairePage ? (
+              <>
+                <Link
+                  href="/culinaire"
+                  className="block px-3 py-2 text-gray-700 hover:text-gray-900"
+                >
+                  Culinaire
+                </Link>
+                <Link
+                  href="/culinaire/tarif"
+                  className="block px-3 py-2 text-gray-700 hover:text-gray-900"
+                >
+                  Tarifs
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/mariage"
+                  className="block px-3 py-2 text-gray-700 hover:text-gray-900"
+                >
+                  Mariage
+                </Link>
+                <Link
+                  href="/video"
+                  className="block px-3 py-2 text-gray-700 hover:text-gray-900"
+                >
+                  Vidéo
+                </Link>
+                <Link
+                  href="/mariage/tarif"
+                  className="block px-3 py-2 text-gray-700 hover:text-gray-900"
+                >
+                  Tarifs
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}
