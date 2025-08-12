@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -18,28 +19,24 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link
               href="/"
-              className="text-2xl font-bold text-gray-900 font-['Cormorant_Garamond']"
+              className="flex items-center space-x-3"
             >
-              Clément Bayard
+              <Image
+                src="/images/logo.webp"
+                alt="Logo Clément Bayard"
+                width={40}
+                height={40}
+                className="object-contain"
+              />
+              <span className="text-2xl font-bold text-gray-900 font-['Cormorant_Garamond']">
+                Clément Bayard
+              </span>
             </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
             {isCulinairePage ? (
-              <>
-                <Link
-                  href="/culinaire"
-                  className="text-gray-700 hover:text-gray-900 transition-colors"
-                >
-                  Culinaire
-                </Link>
-                <Link
-                  href="/culinaire/tarif"
-                  className="text-gray-700 hover:text-gray-900 transition-colors"
-                >
-                  Tarifs
-                </Link>
-              </>
+              <></>
             ) : (
               <>
                 <Link
@@ -113,20 +110,7 @@ export default function Navbar() {
             </Link>
 
             {isCulinairePage ? (
-              <>
-                <Link
-                  href="/culinaire"
-                  className="block px-3 py-2 text-gray-700 hover:text-gray-900"
-                >
-                  Culinaire
-                </Link>
-                <Link
-                  href="/culinaire/tarif"
-                  className="block px-3 py-2 text-gray-700 hover:text-gray-900"
-                >
-                  Tarifs
-                </Link>
-              </>
+              <></>
             ) : (
               <>
                 <Link
