@@ -102,12 +102,12 @@ export default function Navbar() {
             >
               Mariage
             </Link>
-            <Link
+            {/* <Link
               href="/culinaire"
               className="block px-3 py-2 text-gray-700 hover:text-gray-900"
             >
               Culinaire
-            </Link>
+            </Link> */}
             <Link
               href="/video"
               className="block px-3 py-2 text-gray-700 hover:text-gray-900"
@@ -115,17 +115,17 @@ export default function Navbar() {
               Vidéo
             </Link>
             <Link
-              href="/tarifs"
+              href="/mariage/tarif"
               className="block px-3 py-2 text-gray-700 hover:text-gray-900"
             >
               Tarifs
             </Link>
-            <Link
+            {/* <Link
               href="/contact"
               className="block px-3 py-2 text-gray-700 hover:text-gray-900"
             >
               Contact
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}
