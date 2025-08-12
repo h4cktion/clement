@@ -154,7 +154,7 @@ function Mariage() {
           ressemblent.
         </p>
         <a
-          href="mailto:clement@example.com"
+          href="mailto:bayard.clt@gmail.com"
           className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors duration-300 text-lg font-medium"
         >
           Contactez-moi

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useState } from 'react';
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,30 +11,48 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-gray-900 font-['Cormorant_Garamond']">
+            <Link
+              href="/"
+              className="text-2xl font-bold text-gray-900 font-['Cormorant_Garamond']"
+            >
               Clément Bayard
             </Link>
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <Link
+              href="/"
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
               Accueil
             </Link>
-            <Link href="/mariage" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <Link
+              href="/mariage"
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
               Mariage
             </Link>
-            <Link href="/culinaire" className="text-gray-700 hover:text-gray-900 transition-colors">
+            {/* <Link href="/culinaire" className="text-gray-700 hover:text-gray-900 transition-colors">
               Culinaire
-            </Link>
-            <Link href="/video" className="text-gray-700 hover:text-gray-900 transition-colors">
+            </Link> */}
+            <Link
+              href="/video"
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
               Vidéo
             </Link>
-            <Link href="/tarifs" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <Link
+              href="/mariage/tarif"
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
               Tarifs
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-gray-900 transition-colors">
+            {/* <Link
+              href="/contact"
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
               Contact
-            </Link>
+            </Link> */}
           </div>
 
           <div className="md:hidden flex items-center">
@@ -42,11 +60,26 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-gray-900"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
                 {isOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 )}
               </svg>
             </button>
@@ -57,22 +90,40 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
-            <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
+            <Link
+              href="/"
+              className="block px-3 py-2 text-gray-700 hover:text-gray-900"
+            >
               Accueil
             </Link>
-            <Link href="/mariage" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
+            <Link
+              href="/mariage"
+              className="block px-3 py-2 text-gray-700 hover:text-gray-900"
+            >
               Mariage
             </Link>
-            <Link href="/culinaire" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
+            <Link
+              href="/culinaire"
+              className="block px-3 py-2 text-gray-700 hover:text-gray-900"
+            >
               Culinaire
             </Link>
-            <Link href="/video" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
+            <Link
+              href="/video"
+              className="block px-3 py-2 text-gray-700 hover:text-gray-900"
+            >
               Vidéo
             </Link>
-            <Link href="/tarifs" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
+            <Link
+              href="/tarifs"
+              className="block px-3 py-2 text-gray-700 hover:text-gray-900"
+            >
               Tarifs
             </Link>
-            <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-gray-900">
+            <Link
+              href="/contact"
+              className="block px-3 py-2 text-gray-700 hover:text-gray-900"
+            >
               Contact
             </Link>
           </div>
